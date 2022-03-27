@@ -21,5 +21,6 @@ public class Sum {
         }
 
         System.out.println(sum(data));
+
     }
 }
