@@ -14,7 +14,6 @@ class SecondMaximum {
                 secondMax = max;
                 max = data[i];
             }else if(data[i]>secondMax)secondMax = data[i];
-
         }
 
         return secondMax;
