@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-// Java program for the above approach
+
 class SecondMaximum {
 
+    //returns the second largest number in the array
     static int secondmax(int[]data){
 
         int max = data[0];
