@@ -3,32 +3,32 @@ import java.util.Scanner;
 
 class SecondMaximum {
 
-    //returns the second largest number in the array
-    static int secondmax(int[]data){
-
-        int max = data[0];
+    static int secondMaximum(int[]data){
         int secondMax = data[0];
-
-        for(int i=0; i<data.length; i++){
-            if(data[i]>max) {
-                secondMax = max;
-                max = data[i];
-            }else if(data[i]>secondMax)secondMax = data[i];
+        int max = data[0];
+        for (int i=0; i<data.length; i++){
+            if(data[i]>max)max = data[i];
         }
 
+        for (int i=0; i<data.length; i++){
+            if( data[i]<max && data[i]>secondMax ){
+                secondMax = data[i];
+            }
+        }
         return secondMax;
     }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int limit = sc.nextInt();
         int[]data = new int[limit];
 
-        for(int i=0; i<data.length; i++){
+        for(int i=0; i<limit; i++){
             data[i] = sc.nextInt();
         }
 
-        System.out.println(secondmax(data));
+        System.out.println(secondMaximum(data));
     }
 }
 
